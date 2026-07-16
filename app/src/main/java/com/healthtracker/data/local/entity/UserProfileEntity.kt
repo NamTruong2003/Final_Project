@@ -3,6 +3,7 @@ package com.healthtracker.data.local.entity
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.healthtracker.model.ActivityLevel
+import com.healthtracker.model.Gender
 import com.healthtracker.model.Goal
 import java.time.LocalDate
 
@@ -12,7 +13,7 @@ data class UserProfileEntity(
     val id: Int = 1,
     val fullName: String,
     val dateOfBirth: LocalDate,
-    val gender:String,
+    val gender: Gender,
     val weightKg: Double,
     val heightCm: Double,
     val activityLevel: ActivityLevel,
