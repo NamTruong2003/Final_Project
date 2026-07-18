@@ -1,6 +1,7 @@
 package com.healthtracker.data.local
 
 import androidx.room.TypeConverter
+import com.healthtracker.data.local.entity.FoodUnitType
 import com.healthtracker.model.Gender
 import java.time.LocalDate
 
@@ -16,5 +17,11 @@ class Converters {
 
     @TypeConverter
     fun toGender(value: String): Gender = Gender.valueOf(value)
+
+    @TypeConverter
+    fun fromFoodUnitType(type: FoodUnitType): String = type.name
+
+    @TypeConverter
+    fun toFoodUnitType(value: String): FoodUnitType = FoodUnitType.valueOf(value)
 
 }
