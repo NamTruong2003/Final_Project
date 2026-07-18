@@ -8,10 +8,10 @@ import java.time.LocalDate
 @Dao
 interface ActivityDao {
 
-    @Query("SELECT * FROM activity_entry WHERE date = :date")
+    @Query("SELECT * FROM activity_entries WHERE date = :date")
     fun observeByDate(date: LocalDate): Flow<List<ActivityEntryEntity>>
 
-    @Query("SELECT SUM(caloriesBurned) FROM activity_entry WHERE date = :date")
+    @Query("SELECT SUM(caloriesBurned) FROM activity_entries WHERE date = :date")
     suspend fun getTotalCaloriesByDate(date: LocalDate): Int?
 
     @Insert
