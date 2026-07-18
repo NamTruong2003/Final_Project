@@ -9,5 +9,5 @@ data class ActivityTypeEntity(
     val id: Int = 0,
     val name: String,
     val metValue: Double,
-    val iconName: String = ""
+    val iconName: String? = null
 )

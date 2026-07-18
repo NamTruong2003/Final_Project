@@ -8,8 +8,12 @@ data class FoodEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val name: String,
-    val servingSize: String,
-    val calo: Int,
-    val imageUrl: String
-
+    val caloriesPerUnit: Int,
+    val unitType: FoodUnitType,
+    val unitLabel: String,
+    val imageResName: String? = null
 )
+enum class FoodUnitType {
+    PER_100G,
+    PER_SERVING
+}
