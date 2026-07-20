@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.appcompat)
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.2")
     val roomVersion = "2.8.4"
 
@@ -46,7 +47,7 @@ dependencies {
 
     implementation("com.google.dagger:hilt-android:2.60.1")
     ksp("com.google.dagger:hilt-android-compiler:2.60.1")
-
+    implementation("androidx.compose.material:material-icons-extended:1.7.8")
     implementation("androidx.navigation:navigation-compose:2.8.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
