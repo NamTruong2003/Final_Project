@@ -1,0 +1,45 @@
+package com.healthtracker.ui.theme
+
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+
+object Dimens {
+    // Spacing
+    val spaceXXS = 4.dp
+    val spaceXS = 8.dp
+    val spaceS = 12.dp
+    val spaceM = 16.dp
+    val spaceL = 20.dp
+    val spaceXL = 24.dp
+    val spaceXXL = 28.dp
+    val spaceXXXL = 32.dp
+
+    // Component sizing
+    val fieldHeight = 52.dp
+    val buttonHeight = 56.dp
+    val iconButtonSize = 40.dp
+    val iconSize = 24.dp
+    val avatarSize = 48.dp
+    val goalIconSize = 40.dp
+    val checkCircleSize = 24.dp
+    val stepperButtonWidth = 44.dp
+    val activityCardWidth = 140.dp
+    val progressBarHeight = 8.dp
+    val topBarHeight = 64.dp
+
+    // Corner radius
+    val radiusS = 10.dp
+    val radiusM = 12.dp
+    val radiusL = 16.dp
+
+    // Border width
+    val borderThin = 1.dp
+    val borderThick = 2.dp
+
+    // Font size
+    val textXS = 12.sp
+    val textS = 14.sp
+    val textM = 16.sp
+    val textL = 20.sp
+    val textXL = 28.sp
+}
