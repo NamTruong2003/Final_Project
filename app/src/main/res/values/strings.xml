@@ -1,3 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Health Tracker</string>
+    <string name="app_name">HealthTracker</string>
+
+    <string name="onboarding_title">Your Profile</string>
+    <string name="onboarding_subtitle">Tell us a bit about yourself to personalize your plan.</string>
+
+    <string name="label_full_name">Full name</string>
+    <string name="placeholder_full_name">Enter your name</string>
+    <string name="label_date_of_birth">Date of birth</string>
+    <string name="placeholder_date">dd/mm/yyyy</string>
+    <string name="label_gender">Gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="label_weight">Weight (kg)</string>
+    <string name="label_height">Height (cm)</string>
+
+    <string name="section_activity_level">Activity Level</string>
+    <string name="activity_sedentary">Sedentary</string>
+    <string name="activity_light">Light</string>
+    <string name="activity_moderate">Moderate</string>
+    <string name="activity_active">Active</string>
+    <string name="activity_very_active">Very Active</string>
+
+    <string name="section_goal">Goal</string>
+    <string name="goal_lose_weight">Lose Weight</string>
+    <string name="goal_maintain">Maintain Weight</string>
+    <string name="goal_gain_weight">Gain Weight</string>
+
+    <string name="btn_continue">Continue</string>
+
+    <string name="error_name_required">Please enter your full name</string>
+    <string name="error_dob_required">Please select your date of birth</string>
+    <string name="error_dob_invalid">Invalid date of birth</string>
+    <string name="error_weight_required">Please enter your weight</string>
+    <string name="error_weight_invalid">Invalid weight (20-150kg)</string>
+    <string name="error_height_required">Please enter your height</string>
+    <string name="error_height_invalid">Invalid height (50-250cm)</string>
 </resources>

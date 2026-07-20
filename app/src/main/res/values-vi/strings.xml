@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HealthTracker</string>
+
+    <string name="onboarding_title">Hồ sơ của bạn</string>
+    <string name="onboarding_subtitle">Hãy cho chúng tôi biết một chút về bạn để cá nhân hóa kế hoạch.</string>
+
+    <string name="label_full_name">Họ và tên</string>
+    <string name="placeholder_full_name">Nhập tên của bạn</string>
+    <string name="label_date_of_birth">Ngày sinh</string>
+    <string name="placeholder_date">dd/mm/yyyy</string>
+    <string name="label_gender">Giới tính</string>
+    <string name="gender_male">Nam</string>
+    <string name="gender_female">Nữ</string>
+    <string name="label_weight">Cân nặng (kg)</string>
+    <string name="label_height">Chiều cao (cm)</string>
+
+    <string name="section_activity_level">Mức độ hoạt động</string>
+    <string name="activity_sedentary">Ít vận động</string>
+    <string name="activity_light">Nhẹ nhàng</string>
+    <string name="activity_moderate">Vừa phải</string>
+    <string name="activity_active">Năng động</string>
+    <string name="activity_very_active">Rất năng động</string>
+
+    <string name="section_goal">Mục tiêu</string>
+    <string name="goal_lose_weight">Giảm cân</string>
+    <string name="goal_maintain">Duy trì cân nặng</string>
+    <string name="goal_gain_weight">Tăng cân</string>
+
+    <string name="btn_continue">Tiếp tục</string>
+
+    <string name="error_name_required">Vui lòng nhập họ tên</string>
+    <string name="error_dob_required">Vui lòng chọn ngày sinh</string>
+    <string name="error_dob_invalid">Ngày sinh không hợp lệ</string>
+    <string name="error_weight_required">Vui lòng nhập cân nặng</string>
+    <string name="error_weight_invalid">Cân nặng không hợp lệ (20-150kg)</string>
+    <string name="error_height_required">Vui lòng nhập chiều cao</string>
+    <string name="error_height_invalid">Chiều cao không hợp lệ (50-250cm)</string>
+</resources>
