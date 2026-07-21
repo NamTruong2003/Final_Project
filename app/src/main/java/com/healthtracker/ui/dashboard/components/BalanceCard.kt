@@ -28,11 +28,6 @@ fun BalanceCard(netCalories: Int) {
             .fillMaxWidth()
             .clip(RoundedCornerShape(Dimens.cardCornerRadiusMedium))
             .background(MaterialTheme.colorScheme.surfaceContainerLowest)
-            .border(
-                width = 0.dp,
-                color = androidx.compose.ui.graphics.Color.Transparent,
-                shape = RoundedCornerShape(Dimens.cardCornerRadiusMedium)
-            )
             .drawBehind {
                 drawRect(
                     color = androidx.compose.ui.graphics.Color(0xFF00696C),
