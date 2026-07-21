@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.compose.foundation)
     implementation(libs.appcompat)
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.2")
     val roomVersion = "2.8.4"
