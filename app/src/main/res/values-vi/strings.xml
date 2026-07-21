@@ -58,4 +58,22 @@
     <string name="dashboard_add_meal">Thêm bữa ăn</string>
     <string name="dashboard_add_activity">Thêm hoạt động</string>
     <string name="advice_on_track">Bạn đã ăn đủ calo hôm nay, tiếp tục duy trì nhé!</string>
+
+    <string name="meal_diary_title">Nhật ký ăn uống</string>
+    <string name="meal_breakfast">Bữa sáng</string>
+    <string name="meal_lunch">Bữa trưa</string>
+    <string name="meal_dinner">Bữa tối</string>
+    <string name="meal_snack">Bữa phụ</string>
+    <string name="meal_diary_total">Tổng cộng</string>
+    <string name="meal_add_food">Thêm món ăn</string>
+    <string name="meal_search_placeholder">Tìm món ăn…</string>
+    <string name="meal_tab_from_list">Từ danh sách</string>
+    <string name="meal_tab_custom">Tự nhập</string>
+    <string name="meal_custom_food_name">Tên món ăn</string>
+    <string name="meal_custom_food_calories">Tổng calo (kcal)</string>
+    <string name="meal_quantity">Số lượng</string>
+    <string name="meal_no_items">Chưa có món nào</string>
+    <string name="common_add">Thêm</string>
+    <string name="common_cancel">Hủy</string>
+    <string name="common_save">Lưu</string>
 </resources>
