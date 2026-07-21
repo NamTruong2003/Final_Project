@@ -42,4 +42,13 @@ object Dimens {
     val textM = 16.sp
     val textL = 20.sp
     val textXL = 28.sp
+    val ringSize = 256.dp
+    val ringStroke = 12.dp
+    val summaryCardHeight = 128.dp
+    val bottomNavHeight = 80.dp
+    val topBarHeight2 = 64.dp
+    val pillCornerRadius = 999.dp
+    val cardCornerRadiusLarge = 24.dp
+    val cardCornerRadiusMedium = 20.dp
+    val cardCornerRadiusSmall = 16.dp
 }

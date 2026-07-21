@@ -16,6 +16,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.healthtracker.ui.components.BottomNavTab
+import com.healthtracker.ui.dashboard.DashboardScreen
 import com.healthtracker.ui.onboarding.OnboardingScreen
 
 @Composable
@@ -46,7 +48,19 @@ fun AppNavHost(
         }
 
         composable(NavRoutes.DASHBOARD) {
-            PlaceholderScreen("Dashboard Screen")
+            DashboardScreen(
+                onAddMealClick = { navController.navigate(NavRoutes.MEAL_DIARY) },
+                onAddActivityClick = { navController.navigate(NavRoutes.ACTIVITY_DIARY) },
+                onSettingsClick = { navController.navigate(NavRoutes.SETTINGS) },
+                onTabSelected = { tab ->
+                    when (tab) {
+                        BottomNavTab.HOME -> {}
+                        BottomNavTab.DIARY -> navController.navigate(NavRoutes.MEAL_DIARY)
+                        BottomNavTab.STATS -> navController.navigate(NavRoutes.STATISTICS)
+                        BottomNavTab.PROFILE -> navController.navigate(NavRoutes.SETTINGS)
+                    }
+                }
+            )
         }
 
         composable(NavRoutes.MEAL_DIARY) {

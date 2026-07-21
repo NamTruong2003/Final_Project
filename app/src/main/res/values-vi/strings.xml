@@ -33,7 +33,29 @@
     <string name="error_dob_required">Vui lòng chọn ngày sinh</string>
     <string name="error_dob_invalid">Ngày sinh không hợp lệ</string>
     <string name="error_weight_required">Vui lòng nhập cân nặng</string>
-    <string name="error_weight_invalid">Cân nặng không hợp lệ (20-150kg)</string>
+    <string name="error_weight_invalid">Cân nặng không hợp lệ (20–150kg)</string>
     <string name="error_height_required">Vui lòng nhập chiều cao</string>
-    <string name="error_height_invalid">Chiều cao không hợp lệ (50-250cm)</string>
+    <string name="error_height_invalid">Chiều cao không hợp lệ (50–250cm)</string>
+
+    <string name="app_short_name">HealthTracker</string>
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_diary">Nhật ký</string>
+    <string name="nav_stats">Thống kê</string>
+    <string name="nav_profile">Hồ sơ</string>
+    <string name="dashboard_today">Hôm nay</string>
+    <string name="dashboard_kcal_remaining">kcal còn lại</string>
+    <string name="dashboard_target">Mục tiêu</string>
+    <string name="dashboard_eaten">Đã ăn</string>
+    <string name="dashboard_burned">Đã đốt</string>
+    <string name="dashboard_calories_in_card">Calories nạp</string>
+    <string name="dashboard_calories_out_card">Calories tiêu thụ</string>
+    <string name="dashboard_net_balance">Chênh lệch tịnh</string>
+    <string name="advice_under_goal_prefix">Tuyệt vời! Bạn vẫn cần thêm</string>
+    <string name="advice_under_goal_suffix">hôm nay để đạt mục tiêu duy trì cân nặng lý tưởng.</string>
+    <string name="advice_over_goal_prefix">Bạn đã vượt mục tiêu</string>
+    <string name="advice_over_goal_suffix">hôm nay, cân nhắc vận động thêm.</string>
+    <string name="dashboard_kcal_unit">kcal</string>
+    <string name="dashboard_add_meal">Thêm bữa ăn</string>
+    <string name="dashboard_add_activity">Thêm hoạt động</string>
+    <string name="advice_on_track">Bạn đã ăn đủ calo hôm nay, tiếp tục duy trì nhé!</string>
 </resources>

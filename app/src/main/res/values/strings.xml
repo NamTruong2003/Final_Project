@@ -33,7 +33,29 @@
     <string name="error_dob_required">Please select your date of birth</string>
     <string name="error_dob_invalid">Invalid date of birth</string>
     <string name="error_weight_required">Please enter your weight</string>
-    <string name="error_weight_invalid">Invalid weight (20-150kg)</string>
+    <string name="error_weight_invalid">Invalid weight (20–150kg)</string>
     <string name="error_height_required">Please enter your height</string>
-    <string name="error_height_invalid">Invalid height (50-250cm)</string>
+    <string name="error_height_invalid">Invalid height (50–250cm)</string>
+    <string name="app_short_name">HealthTracker</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_diary">Diary</string>
+    <string name="nav_stats">Stats</string>
+    <string name="nav_profile">Profile</string>
+    <string name="dashboard_today">Today</string>
+    <string name="dashboard_kcal_remaining">kcal remaining</string>
+    <string name="dashboard_target">Target</string>
+    <string name="dashboard_eaten">Eaten</string>
+    <string name="dashboard_burned">Burned</string>
+    <string name="dashboard_calories_in_card">Calories In</string>
+    <string name="dashboard_calories_out_card">Calories Out</string>
+    <string name="dashboard_net_balance">Net Balance</string>
+    <string name="advice_under_goal_prefix">Great! You still need</string>
+    <string name="advice_under_goal_suffix">today to reach your goal.</string>
+    <string name="advice_over_goal_prefix">You went over your goal by</string>
+    <string name="advice_over_goal_suffix">today, consider more activity.</string>
+    <string name="dashboard_kcal_unit">kcal</string>
+    <string name="dashboard_add_meal">Add Meal</string>
+    <string name="dashboard_add_activity">Add Activity</string>
+    <string name="advice_on_track">You\'ve met your calorie goal today, keep it up!</string>
+
 </resources>
