@@ -51,4 +51,10 @@ object Dimens {
     val cardCornerRadiusLarge = 24.dp
     val cardCornerRadiusMedium = 20.dp
     val cardCornerRadiusSmall = 16.dp
+
+    val fabSize = 64.dp
+    val mealIconSize = 40.dp
+    val sheetCornerRadius = 20.dp
+    val summaryBarHeight = 90.dp
+    val listItemSpacing = 12.dp
 }
