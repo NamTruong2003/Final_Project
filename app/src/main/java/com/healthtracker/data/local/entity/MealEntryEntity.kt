@@ -9,7 +9,8 @@ import java.time.LocalDate
 data class MealEntryEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-    val foodId:Int,
+    val foodId:Int?,
+    val customFoodName:String? ,
     val quantity:Int,
     val mealType: MealType,
     val date: LocalDate,

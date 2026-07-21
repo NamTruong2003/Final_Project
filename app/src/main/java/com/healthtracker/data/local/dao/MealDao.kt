@@ -23,4 +23,35 @@ interface MealDao {
 
     @Delete
     suspend fun delete(entry: MealEntryEntity)
+
+    @Query("DELETE FROM meal_entry WHERE id = :id")
+    suspend fun deleteById(id: Int)
+
+    @Query("""
+        SELECT 
+            m.id AS id,
+            COALESCE(f.name, m.customFoodName) AS displayName,
+            m.quantity AS quantity,
+            COALESCE(f.unitLabel, '') AS unitLabel,
+            m.mealType AS mealType,
+            m.date AS date,
+            m.totalCalories AS totalCalories
+        FROM meal_entry m
+        LEFT JOIN foods f ON m.foodId = f.id
+        WHERE m.date = :date
+        ORDER BY m.mealType
+    """)
+    fun observeByDateWithFoodInfo(date: LocalDate): Flow<List<MealWithFoodInfoRow>>
 }
+
+
+
+data class MealWithFoodInfoRow(
+    val id: Int,
+    val displayName: String,
+    val quantity: Int,
+    val unitLabel: String,
+    val mealType: MealType,
+    val date: LocalDate,
+    val totalCalories: Int
+)
