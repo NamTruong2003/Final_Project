@@ -25,7 +25,7 @@ object TdeeCalculator {
         val adjusted = when (profile.goal) {
             Goal.LOSE_WEIGHT -> tdee + Goal.LOSE_WEIGHT.adjustment
             Goal.MAINTAIN_WEIGHT -> tdee + Goal.MAINTAIN_WEIGHT.adjustment
-            Goal.GAIN_WEIGHT -> tdee + Goal.MAINTAIN_WEIGHT.adjustment
+            Goal.GAIN_WEIGHT -> tdee + Goal.GAIN_WEIGHT.adjustment
         }
         return adjusted.toInt()
     }
