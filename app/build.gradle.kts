@@ -1,15 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.devtools.ksp") version "2.2.10-2.0.2"
+    id("com.google.dagger.hilt.android") version "2.60.1"
 }
 
 android {
     namespace = "com.healthtracker"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.healthtracker"
@@ -31,6 +29,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+        isCoreLibraryDesugaringEnabled = true
     }
     buildFeatures {
         compose = true
@@ -38,6 +37,22 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.compose.foundation)
+    implementation(libs.appcompat)
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.2")
+    val roomVersion = "2.8.4"
+
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
+
+    implementation("com.google.dagger:hilt-android:2.60.1")
+    ksp("com.google.dagger:hilt-android-compiler:2.60.1")
+    implementation("androidx.compose.material:material-icons-extended:1.7.8")
+    implementation("androidx.navigation:navigation-compose:2.8.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)

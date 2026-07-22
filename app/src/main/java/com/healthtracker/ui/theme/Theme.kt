@@ -1,58 +1,162 @@
 package com.healthtracker.ui.theme
 
-import android.app.Activity
-import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.runtime.CompositionLocalProvider
+import com.healthtracker.model.ColorPalette
+import com.healthtracker.model.FontSize
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+private fun colorSchemeFor(palette: ColorPalette, darkTheme: Boolean) = when (palette) {
+    ColorPalette.GREEN -> if (darkTheme) greenDarkScheme() else greenLightScheme()
+    ColorPalette.BLUE -> if (darkTheme) blueDarkScheme() else blueLightScheme()
+    ColorPalette.PURPLE -> if (darkTheme) purpleDarkScheme() else purpleLightScheme()
+}
+
+private fun greenLightScheme() = lightColorScheme(
+    primary = PrimaryLight,
+    onPrimary = OnPrimaryLight,
+    primaryContainer = PrimaryContainerLight,
+    onPrimaryContainer = OnPrimaryContainerLight,
+    secondary = SecondaryLight,
+    secondaryContainer = SecondaryContainerLight,
+    onSecondaryContainer = OnSecondaryContainerLight,
+    tertiary = TertiaryLight,
+    onTertiary = OnTertiaryLight,
+    tertiaryContainer = TertiaryContainerLight,
+    onTertiaryContainer = OnTertiaryContainerLight,
+    background = BackgroundLight,
+    surface = SurfaceLight,
+    surfaceContainerLowest = SurfaceContainerLowestLight,
+    surfaceContainerLow = SurfaceContainerLowLight,
+    surfaceContainer = SurfaceContainerLight,
+    surfaceContainerHigh = SurfaceContainerHighLight,
+    surfaceContainerHighest = SurfaceContainerHighestLight,
+    onSurface = OnSurfaceLight,
+    onSurfaceVariant = OnSurfaceVariantLight,
+    outline = OutlineLight,
+    outlineVariant = OutlineVariantLight,
+    error = ErrorLight
 )
 
-private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+private fun greenDarkScheme() = darkColorScheme(
+    primary = PrimaryDark,
+    onPrimary = OnPrimaryDark,
+    primaryContainer = PrimaryContainerDark,
+    onPrimaryContainer = OnPrimaryContainerDark,
+    secondary = SecondaryDark,
+    secondaryContainer = SecondaryContainerDark,
+    onSecondaryContainer = OnSecondaryContainerDark,
+    tertiary = TertiaryDark,
+    onTertiary = OnTertiaryDark,
+    tertiaryContainer = TertiaryContainerDark,
+    onTertiaryContainer = OnTertiaryContainerDark,
+    background = BackgroundDark,
+    surface = SurfaceDark,
+    surfaceContainerLowest = SurfaceContainerLowestDark,
+    surfaceContainerLow = SurfaceContainerLowDark,
+    surfaceContainer = SurfaceContainerDark,
+    surfaceContainerHigh = SurfaceContainerHighDark,
+    surfaceContainerHighest = SurfaceContainerHighestDark,
+    onSurface = OnSurfaceDark,
+    onSurfaceVariant = OnSurfaceVariantDark,
+    outline = OutlineDark,
+    outlineVariant = OutlineVariantDark,
+    error = ErrorDark
+)
 
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+private fun blueLightScheme() = lightColorScheme(
+    primary = PrimaryBlueLight,
+    onPrimary = OnPrimaryBlueLight,
+    primaryContainer = PrimaryContainerBlueLight,
+    onPrimaryContainer = OnPrimaryContainerBlueLight,
+    secondary = SecondaryLight,
+    background = BackgroundLight,
+    surface = SurfaceLight,
+    surfaceContainerLowest = SurfaceContainerLowestLight,
+    surfaceContainerLow = SurfaceContainerLowLight,
+    surfaceContainer = SurfaceContainerLight,
+    surfaceContainerHigh = SurfaceContainerHighLight,
+    surfaceContainerHighest = SurfaceContainerHighestLight,
+    onSurface = OnSurfaceLight,
+    onSurfaceVariant = OnSurfaceVariantLight,
+    outlineVariant = OutlineVariantLight,
+    error = ErrorLight
+)
+
+private fun blueDarkScheme() = darkColorScheme(
+    primary = PrimaryBlueDark,
+    onPrimary = OnPrimaryBlueDark,
+    primaryContainer = PrimaryContainerBlueDark,
+    onPrimaryContainer = OnPrimaryContainerBlueDark,
+    secondary = SecondaryDark,
+    background = BackgroundDark,
+    surface = SurfaceDark,
+    surfaceContainerLowest = SurfaceContainerLowestDark,
+    surfaceContainerLow = SurfaceContainerLowDark,
+    surfaceContainer = SurfaceContainerDark,
+    surfaceContainerHigh = SurfaceContainerHighDark,
+    surfaceContainerHighest = SurfaceContainerHighestDark,
+    onSurface = OnSurfaceDark,
+    onSurfaceVariant = OnSurfaceVariantDark,
+    outlineVariant = OutlineVariantDark,
+    error = ErrorDark
+)
+
+private fun purpleLightScheme() = lightColorScheme(
+    primary = PrimaryPurpleLight,
+    onPrimary = OnPrimaryPurpleLight,
+    primaryContainer = PrimaryContainerPurpleLight,
+    onPrimaryContainer = OnPrimaryContainerPurpleLight,
+    secondary = SecondaryLight,
+    background = BackgroundLight,
+    surface = SurfaceLight,
+    surfaceContainerLowest = SurfaceContainerLowestLight,
+    surfaceContainerLow = SurfaceContainerLowLight,
+    surfaceContainer = SurfaceContainerLight,
+    surfaceContainerHigh = SurfaceContainerHighLight,
+    surfaceContainerHighest = SurfaceContainerHighestLight,
+    onSurface = OnSurfaceLight,
+    onSurfaceVariant = OnSurfaceVariantLight,
+    outlineVariant = OutlineVariantLight,
+    error = ErrorLight
+)
+
+private fun purpleDarkScheme() = darkColorScheme(
+    primary = PrimaryPurpleDark,
+    onPrimary = OnPrimaryPurpleDark,
+    primaryContainer = PrimaryContainerPurpleDark,
+    onPrimaryContainer = OnPrimaryContainerPurpleDark,
+    secondary = SecondaryDark,
+    background = BackgroundDark,
+    surface = SurfaceDark,
+    surfaceContainerLowest = SurfaceContainerLowestDark,
+    surfaceContainerLow = SurfaceContainerLowDark,
+    surfaceContainer = SurfaceContainerDark,
+    surfaceContainerHigh = SurfaceContainerHighDark,
+    surfaceContainerHighest = SurfaceContainerHighestDark,
+    onSurface = OnSurfaceDark,
+    onSurfaceVariant = OnSurfaceVariantDark,
+    outlineVariant = OutlineVariantDark,
+    error = ErrorDark
 )
 
 @Composable
 fun HealthTrackerTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    colorPalette: ColorPalette = ColorPalette.GREEN,
+    fontSize: FontSize = FontSize.MEDIUM,
     content: @Composable () -> Unit
 ) {
-    val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
+    val colorScheme = colorSchemeFor(colorPalette, darkTheme)
 
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
+    CompositionLocalProvider(LocalFontScale provides fontSize.toScale()) {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = Typography,
+            content = content
+        )
     }
-
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
-    )
 }

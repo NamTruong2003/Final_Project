@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HealthTracker</string>
+
+    <string name="onboarding_title">Hồ sơ của bạn</string>
+    <string name="onboarding_subtitle">Hãy cho chúng tôi biết một chút về bạn để cá nhân hóa kế hoạch.</string>
+
+    <string name="label_full_name">Họ và tên</string>
+    <string name="placeholder_full_name">Nhập tên của bạn</string>
+    <string name="label_date_of_birth">Ngày sinh</string>
+    <string name="placeholder_date">dd/mm/yyyy</string>
+    <string name="label_gender">Giới tính</string>
+    <string name="gender_male">Nam</string>
+    <string name="gender_female">Nữ</string>
+    <string name="label_weight">Cân nặng (kg)</string>
+    <string name="label_height">Chiều cao (cm)</string>
+
+    <string name="section_activity_level">Mức độ hoạt động</string>
+    <string name="activity_sedentary">Ít vận động</string>
+    <string name="activity_light">Nhẹ nhàng</string>
+    <string name="activity_moderate">Vừa phải</string>
+    <string name="activity_active">Năng động</string>
+    <string name="activity_very_active">Rất năng động</string>
+
+    <string name="section_goal">Mục tiêu</string>
+    <string name="goal_lose_weight">Giảm cân</string>
+    <string name="goal_maintain">Duy trì cân nặng</string>
+    <string name="goal_gain_weight">Tăng cân</string>
+
+    <string name="btn_continue">Tiếp tục</string>
+
+    <string name="error_name_required">Vui lòng nhập họ tên</string>
+    <string name="error_dob_required">Vui lòng chọn ngày sinh</string>
+    <string name="error_dob_invalid">Ngày sinh không hợp lệ</string>
+    <string name="error_weight_required">Vui lòng nhập cân nặng</string>
+    <string name="error_weight_invalid">Cân nặng không hợp lệ (20–150kg)</string>
+    <string name="error_height_required">Vui lòng nhập chiều cao</string>
+    <string name="error_height_invalid">Chiều cao không hợp lệ (50–250cm)</string>
+
+    <string name="app_short_name">HealthTracker</string>
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_diary">Nhật ký</string>
+    <string name="nav_stats">Thống kê</string>
+    <string name="nav_profile">Hồ sơ</string>
+    <string name="dashboard_today">Hôm nay</string>
+    <string name="dashboard_kcal_remaining">kcal còn lại</string>
+    <string name="dashboard_target">Mục tiêu</string>
+    <string name="dashboard_eaten">Đã ăn</string>
+    <string name="dashboard_burned">Đã đốt</string>
+    <string name="dashboard_calories_in_card">Calories nạp</string>
+    <string name="dashboard_calories_out_card">Calories tiêu thụ</string>
+    <string name="dashboard_net_balance">Chênh lệch tịnh</string>
+    <string name="advice_under_goal_prefix">Tuyệt vời! Bạn vẫn cần thêm</string>
+    <string name="advice_under_goal_suffix">hôm nay để đạt mục tiêu duy trì cân nặng lý tưởng.</string>
+    <string name="advice_over_goal_prefix">Bạn đã vượt mục tiêu</string>
+    <string name="advice_over_goal_suffix">hôm nay, cân nhắc vận động thêm.</string>
+    <string name="dashboard_kcal_unit">kcal</string>
+    <string name="dashboard_add_meal">Thêm bữa ăn</string>
+    <string name="dashboard_add_activity">Thêm hoạt động</string>
+    <string name="advice_on_track">Bạn đã ăn đủ calo hôm nay, tiếp tục duy trì nhé!</string>
+
+    <string name="meal_diary_title">Nhật ký ăn uống</string>
+    <string name="meal_breakfast">Bữa sáng</string>
+    <string name="meal_lunch">Bữa trưa</string>
+    <string name="meal_dinner">Bữa tối</string>
+    <string name="meal_snack">Bữa phụ</string>
+    <string name="meal_diary_total">Tổng cộng</string>
+    <string name="meal_add_food">Thêm món ăn</string>
+    <string name="meal_search_placeholder">Tìm món ăn…</string>
+    <string name="meal_tab_from_list">Từ danh sách</string>
+    <string name="meal_tab_custom">Tự nhập</string>
+    <string name="meal_custom_food_name">Tên món ăn</string>
+    <string name="meal_custom_food_calories">Tổng calo (kcal)</string>
+    <string name="meal_quantity">Số lượng</string>
+    <string name="meal_no_items">Chưa có món nào</string>
+    <string name="common_add">Thêm</string>
+    <string name="common_cancel">Hủy</string>
+    <string name="common_save">Lưu</string>
+
+    <string name="activity_diary_title">Nhật ký hoạt động</string>
+    <string name="activity_diary_total_burned">Tổng calo tiêu thụ:</string>
+    <string name="activity_add_title">Thêm hoạt động</string>
+    <string name="activity_select_type">Chọn loại hoạt động</string>
+    <string name="activity_duration_minutes">Thời gian (phút)</string>
+    <string name="activity_estimated_burn">Dự kiến tiêu hao</string>
+    <string name="activity_save">Lưu hoạt động</string>
+    <string name="activity_no_items">Chưa có hoạt động nào</string>
+    <string name="activity_minutes_short">phút</string>
+
+    <string name="statistics_title">Thống kê</string>
+    <string name="statistics_week">Tuần</string>
+    <string name="statistics_month">Tháng</string>
+    <string name="statistics_calories_in_chart">Calo nạp vào</string>
+    <string name="statistics_calories_out_chart">Calo tiêu thụ</string>
+    <string name="statistics_goal_label">Mục tiêu: %1$d</string>
+    <string name="statistics_avg_in">Trung bình nạp</string>
+    <string name="statistics_avg_out">Trung bình đốt</string>
+    <string name="statistics_days_goal_met">Đạt mục tiêu</string>
+    <string name="statistics_days_unit">ngày</string>
+
+    <string name="settings_title">Cài đặt</string>
+    <string name="settings_edit_profile_cta">Chỉnh sửa hồ sơ</string>
+    <string name="settings_language">Ngôn ngữ</string>
+    <string name="settings_appearance">Giao diện</string>
+    <string name="settings_brightness">Độ sáng</string>
+    <string name="brightness_light">Sáng</string>
+    <string name="brightness_dark">Tối</string>
+    <string name="brightness_system">Hệ thống</string>
+    <string name="settings_color">Màu sắc chủ đạo</string>
+    <string name="settings_font_size">Cỡ chữ</string>
+    <string name="font_size_small">Nhỏ</string>
+    <string name="font_size_medium">Vừa</string>
+    <string name="font_size_large">Lớn</string>
+    <string name="settings_other">Khác</string>
+    <string name="settings_app_version">Phiên bản ứng dụng</string>
+
+    <string name="edit_profile_title">Chỉnh sửa hồ sơ</string>
+    <string name="edit_profile_save">Lưu</string>
+    <string name="edit_profile_save_changes">Lưu thay đổi</string>
+    <string name="edit_profile_change_avatar">Thay đổi ảnh đại diện</string>
+    <string name="tdee_goal_label">TDEE mục tiêu</string>
+    <string name="bmi_index_label">Chỉ số BMI</string>
+    <string name="bmi_underweight">Thiếu cân</string>
+    <string name="bmi_normal">Bình thường</string>
+    <string name="bmi_overweight">Thừa cân</string>
+    <string name="bmi_obese">Béo phì</string>
+</resources>

@@ -1,3 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Health Tracker</string>
+    <string name="app_name">HealthTracker</string>
+
+    <string name="onboarding_title">Your Profile</string>
+    <string name="onboarding_subtitle">Tell us a bit about yourself to personalize your plan.</string>
+
+    <string name="label_full_name">Full name</string>
+    <string name="placeholder_full_name">Enter your name</string>
+    <string name="label_date_of_birth">Date of birth</string>
+    <string name="placeholder_date">dd/mm/yyyy</string>
+    <string name="label_gender">Gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="label_weight">Weight (kg)</string>
+    <string name="label_height">Height (cm)</string>
+
+    <string name="section_activity_level">Activity Level</string>
+    <string name="activity_sedentary">Sedentary</string>
+    <string name="activity_light">Light</string>
+    <string name="activity_moderate">Moderate</string>
+    <string name="activity_active">Active</string>
+    <string name="activity_very_active">Very Active</string>
+
+    <string name="section_goal">Goal</string>
+    <string name="goal_lose_weight">Lose Weight</string>
+    <string name="goal_maintain">Maintain Weight</string>
+    <string name="goal_gain_weight">Gain Weight</string>
+
+    <string name="btn_continue">Continue</string>
+
+    <string name="error_name_required">Please enter your full name</string>
+    <string name="error_dob_required">Please select your date of birth</string>
+    <string name="error_dob_invalid">Invalid date of birth</string>
+    <string name="error_weight_required">Please enter your weight</string>
+    <string name="error_weight_invalid">Invalid weight (20–150kg)</string>
+    <string name="error_height_required">Please enter your height</string>
+    <string name="error_height_invalid">Invalid height (50–250cm)</string>
+    <string name="app_short_name">HealthTracker</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_diary">Diary</string>
+    <string name="nav_stats">Stats</string>
+    <string name="nav_profile">Profile</string>
+    <string name="dashboard_today">Today</string>
+    <string name="dashboard_kcal_remaining">kcal remaining</string>
+    <string name="dashboard_target">Target</string>
+    <string name="dashboard_eaten">Eaten</string>
+    <string name="dashboard_burned">Burned</string>
+    <string name="dashboard_calories_in_card">Calories In</string>
+    <string name="dashboard_calories_out_card">Calories Out</string>
+    <string name="dashboard_net_balance">Net Balance</string>
+    <string name="advice_under_goal_prefix">Great! You still need</string>
+    <string name="advice_under_goal_suffix">today to reach your goal.</string>
+    <string name="advice_over_goal_prefix">You went over your goal by</string>
+    <string name="advice_over_goal_suffix">today, consider more activity.</string>
+    <string name="dashboard_kcal_unit">kcal</string>
+    <string name="dashboard_add_meal">Add Meal</string>
+    <string name="dashboard_add_activity">Add Activity</string>
+    <string name="advice_on_track">You\'ve met your calorie goal today, keep it up!</string>
+
+    <string name="meal_diary_title">Food Diary</string>
+    <string name="meal_breakfast">Breakfast</string>
+    <string name="meal_lunch">Lunch</string>
+    <string name="meal_dinner">Dinner</string>
+    <string name="meal_snack">Snack</string>
+    <string name="meal_diary_total">Total</string>
+    <string name="meal_add_food">Add Food</string>
+    <string name="meal_search_placeholder">Search food…</string>
+    <string name="meal_tab_from_list">From List</string>
+    <string name="meal_tab_custom">Custom</string>
+    <string name="meal_custom_food_name">Food name</string>
+    <string name="meal_custom_food_calories">Total calories (kcal)</string>
+    <string name="meal_quantity">Quantity</string>
+    <string name="meal_no_items">No items yet</string>
+    <string name="common_add">Add</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_save">Save</string>
+
+    <string name="activity_diary_title">Activity Log</string>
+    <string name="activity_diary_total_burned">Total burned:</string>
+    <string name="activity_add_title">Add Activity</string>
+    <string name="activity_select_type">Select activity type</string>
+    <string name="activity_duration_minutes">Duration (minutes)</string>
+    <string name="activity_estimated_burn">Estimated burn</string>
+    <string name="activity_save">Save Activity</string>
+    <string name="activity_no_items">No activities logged yet</string>
+    <string name="activity_minutes_short">min</string>
+
+    <string name="statistics_title">Statistics</string>
+    <string name="statistics_week">Week</string>
+    <string name="statistics_month">Month</string>
+    <string name="statistics_calories_in_chart">Calories In</string>
+    <string name="statistics_calories_out_chart">Calories Out</string>
+    <string name="statistics_goal_label">Goal: %1$d</string>
+    <string name="statistics_avg_in">Average In</string>
+    <string name="statistics_avg_out">Average Out</string>
+    <string name="statistics_days_goal_met">Goal Met</string>
+    <string name="statistics_days_unit">days</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_edit_profile_cta">Edit profile</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_brightness">Brightness</string>
+    <string name="brightness_light">Light</string>
+    <string name="brightness_dark">Dark</string>
+    <string name="brightness_system">System</string>
+    <string name="settings_color">Theme Color</string>
+    <string name="settings_font_size">Font Size</string>
+    <string name="font_size_small">Small</string>
+    <string name="font_size_medium">Medium</string>
+    <string name="font_size_large">Large</string>
+    <string name="settings_other">Other</string>
+    <string name="settings_app_version">App version</string>
+
+    <string name="edit_profile_title">Edit Profile</string>
+    <string name="edit_profile_save">Save</string>
+    <string name="edit_profile_save_changes">Save Changes</string>
+    <string name="edit_profile_change_avatar">Change avatar</string>
+    <string name="tdee_goal_label">Target TDEE</string>
+    <string name="bmi_index_label">BMI Index</string>
+    <string name="bmi_underweight">Underweight</string>
+    <string name="bmi_normal">Normal</string>
+    <string name="bmi_overweight">Overweight</string>
+    <string name="bmi_obese">Obese</string>
+
 </resources>
