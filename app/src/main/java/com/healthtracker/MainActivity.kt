@@ -5,7 +5,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.runtime.getValue
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.healthtracker.data.repository.SettingsRepository
+import com.healthtracker.model.ColorPalette
+import com.healthtracker.model.ThemeBrightness
 import com.healthtracker.navigation.AppNavHost
 import com.healthtracker.ui.theme.HealthTrackerTheme
 import com.healthtracker.util.LocaleHelper
@@ -26,7 +31,15 @@ class MainActivity : AppCompatActivity() {
             LocaleHelper.setAppLanguage(savedLang)
         }
         setContent {
-            HealthTrackerTheme {
+            val themeBrightness by settingsRepository.observeThemeBrightness().collectAsStateWithLifecycle(initialValue = ThemeBrightness.SYSTEM)
+            val colorPalette by settingsRepository.observeColorPalette().collectAsStateWithLifecycle(initialValue = ColorPalette.GREEN)
+
+            val darkTheme = when (themeBrightness) {
+                ThemeBrightness.LIGHT -> false
+                ThemeBrightness.DARK -> true
+                ThemeBrightness.SYSTEM -> isSystemInDarkTheme()
+            }
+            HealthTrackerTheme (darkTheme = darkTheme,colorPalette = colorPalette) {
                 AppNavHost()
             }
         }
