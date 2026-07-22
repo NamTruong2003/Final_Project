@@ -21,6 +21,7 @@ import com.healthtracker.ui.components.BottomNavTab
 import com.healthtracker.ui.dashboard.DashboardScreen
 import com.healthtracker.ui.mealdiary.MealDiaryScreen
 import com.healthtracker.ui.onboarding.OnboardingScreen
+import com.healthtracker.ui.statistics.StatisticsScreen
 
 @Composable
 fun AppNavHost(
@@ -92,7 +93,16 @@ fun AppNavHost(
         }
 
         composable(NavRoutes.STATISTICS) {
-            PlaceholderScreen("Statistics Screen")
+            StatisticsScreen(
+                onTabSelected = { tab ->
+                    when (tab) {
+                        BottomNavTab.HOME -> navController.navigate(NavRoutes.DASHBOARD)
+                        BottomNavTab.DIARY -> navController.navigate(NavRoutes.MEAL_DIARY)
+                        BottomNavTab.STATS -> {}
+                        BottomNavTab.PROFILE -> navController.navigate(NavRoutes.SETTINGS)
+                    }
+                }
+            )
         }
 
         composable(NavRoutes.SETTINGS) {
