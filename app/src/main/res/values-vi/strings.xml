@@ -76,4 +76,14 @@
     <string name="common_add">Thêm</string>
     <string name="common_cancel">Hủy</string>
     <string name="common_save">Lưu</string>
+
+    <string name="activity_diary_title">Nhật ký hoạt động</string>
+    <string name="activity_diary_total_burned">Tổng calo tiêu thụ:</string>
+    <string name="activity_add_title">Thêm hoạt động</string>
+    <string name="activity_select_type">Chọn loại hoạt động</string>
+    <string name="activity_duration_minutes">Thời gian (phút)</string>
+    <string name="activity_estimated_burn">Dự kiến tiêu hao</string>
+    <string name="activity_save">Lưu hoạt động</string>
+    <string name="activity_no_items">Chưa có hoạt động nào</string>
+    <string name="activity_minutes_short">phút</string>
 </resources>

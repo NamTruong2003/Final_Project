@@ -76,5 +76,15 @@
     <string name="common_cancel">Cancel</string>
     <string name="common_save">Save</string>
 
+    <string name="activity_diary_title">Activity Log</string>
+    <string name="activity_diary_total_burned">Total burned:</string>
+    <string name="activity_add_title">Add Activity</string>
+    <string name="activity_select_type">Select activity type</string>
+    <string name="activity_duration_minutes">Duration (minutes)</string>
+    <string name="activity_estimated_burn">Estimated burn</string>
+    <string name="activity_save">Save Activity</string>
+    <string name="activity_no_items">No activities logged yet</string>
+    <string name="activity_minutes_short">min</string>
+
 
 </resources>
