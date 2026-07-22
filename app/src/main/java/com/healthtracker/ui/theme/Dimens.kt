@@ -57,4 +57,8 @@ object Dimens {
     val sheetCornerRadius = 20.dp
     val summaryBarHeight = 90.dp
     val listItemSpacing = 12.dp
+
+    val activityTypeChipSize = 64.dp
+    val activityIconCircle = 48.dp
+    val activityLeftBarWidth = 4.dp
 }
