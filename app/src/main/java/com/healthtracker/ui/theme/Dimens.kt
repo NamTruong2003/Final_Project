@@ -61,4 +61,7 @@ object Dimens {
     val activityTypeChipSize = 64.dp
     val activityIconCircle = 48.dp
     val activityLeftBarWidth = 4.dp
+
+    val chartHeight = 240.dp
+    val statCardIconSize = 32.dp
 }

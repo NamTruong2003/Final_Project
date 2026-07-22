@@ -86,4 +86,15 @@
     <string name="activity_save">Lưu hoạt động</string>
     <string name="activity_no_items">Chưa có hoạt động nào</string>
     <string name="activity_minutes_short">phút</string>
+
+    <string name="statistics_title">Thống kê</string>
+    <string name="statistics_week">Tuần</string>
+    <string name="statistics_month">Tháng</string>
+    <string name="statistics_calories_in_chart">Calo nạp vào</string>
+    <string name="statistics_calories_out_chart">Calo tiêu thụ</string>
+    <string name="statistics_goal_label">Mục tiêu: %1$d</string>
+    <string name="statistics_avg_in">Trung bình nạp</string>
+    <string name="statistics_avg_out">Trung bình đốt</string>
+    <string name="statistics_days_goal_met">Đạt mục tiêu</string>
+    <string name="statistics_days_unit">ngày</string>
 </resources>

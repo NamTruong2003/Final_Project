@@ -86,5 +86,16 @@
     <string name="activity_no_items">No activities logged yet</string>
     <string name="activity_minutes_short">min</string>
 
+    <string name="statistics_title">Statistics</string>
+    <string name="statistics_week">Week</string>
+    <string name="statistics_month">Month</string>
+    <string name="statistics_calories_in_chart">Calories In</string>
+    <string name="statistics_calories_out_chart">Calories Out</string>
+    <string name="statistics_goal_label">Goal: %1$d</string>
+    <string name="statistics_avg_in">Average In</string>
+    <string name="statistics_avg_out">Average Out</string>
+    <string name="statistics_days_goal_met">Goal Met</string>
+    <string name="statistics_days_unit">days</string>
+
 
 </resources>
