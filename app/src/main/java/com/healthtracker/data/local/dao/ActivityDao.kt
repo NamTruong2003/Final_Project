@@ -19,4 +19,6 @@ interface ActivityDao {
 
     @Delete
     suspend fun delete(entry: ActivityEntryEntity)
+    @Query("DELETE FROM activity_entries WHERE id = :id")
+    suspend fun deleteById(id: Int)
 }
