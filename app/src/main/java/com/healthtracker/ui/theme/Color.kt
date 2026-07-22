@@ -54,3 +54,23 @@ val OnSecondaryContainerDark = Color(0xFF72D6DA)
 val SurfaceGreenDark = Color(0xFF0F2818)
 val SurfaceBlueDark = Color(0xFF0B1F30)
 val OutlineDark = Color(0xFFBFC9C1)
+// Blue
+val PrimaryBlueLight = Color(0xFF1565C0)
+val OnPrimaryBlueLight = Color(0xFFFFFFFF)
+val PrimaryContainerBlueLight = Color(0xFF1976D2)
+val OnPrimaryContainerBlueLight = Color(0xFFBBDEFB)
+
+val PrimaryBlueDark = Color(0xFF90CAF9)
+val OnPrimaryBlueDark = Color(0xFF003258)
+val PrimaryContainerBlueDark = Color(0xFF1565C0)
+val OnPrimaryContainerBlueDark = Color(0xFFD3E4FE)
+// Purple
+val PrimaryPurpleLight = Color(0xFF6A1B9A)
+val OnPrimaryPurpleLight = Color(0xFFFFFFFF)
+val PrimaryContainerPurpleLight = Color(0xFF8E24AA)
+val OnPrimaryContainerPurpleLight = Color(0xFFE1BEE7)
+
+val PrimaryPurpleDark = Color(0xFFCE93D8)
+val OnPrimaryPurpleDark = Color(0xFF3B0060)
+val PrimaryContainerPurpleDark = Color(0xFF6A1B9A)
+val OnPrimaryContainerPurpleDark = Color(0xFFF3E5F5)
