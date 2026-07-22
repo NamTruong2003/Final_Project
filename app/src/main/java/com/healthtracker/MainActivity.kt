@@ -10,6 +10,7 @@ import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.healthtracker.data.repository.SettingsRepository
 import com.healthtracker.model.ColorPalette
+import com.healthtracker.model.FontSize
 import com.healthtracker.model.ThemeBrightness
 import com.healthtracker.navigation.AppNavHost
 import com.healthtracker.ui.theme.HealthTrackerTheme
@@ -33,13 +34,14 @@ class MainActivity : AppCompatActivity() {
         setContent {
             val themeBrightness by settingsRepository.observeThemeBrightness().collectAsStateWithLifecycle(initialValue = ThemeBrightness.SYSTEM)
             val colorPalette by settingsRepository.observeColorPalette().collectAsStateWithLifecycle(initialValue = ColorPalette.GREEN)
-
+            val fontSize by settingsRepository.observeFontSize()
+                .collectAsStateWithLifecycle(initialValue = FontSize.MEDIUM)
             val darkTheme = when (themeBrightness) {
                 ThemeBrightness.LIGHT -> false
                 ThemeBrightness.DARK -> true
                 ThemeBrightness.SYSTEM -> isSystemInDarkTheme()
             }
-            HealthTrackerTheme (darkTheme = darkTheme,colorPalette = colorPalette) {
+            HealthTrackerTheme (darkTheme = darkTheme,colorPalette = colorPalette, fontSize = fontSize) {
                 AppNavHost()
             }
         }

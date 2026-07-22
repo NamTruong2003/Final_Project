@@ -1,5 +1,7 @@
 package com.healthtracker.ui.theme
 
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -37,11 +39,20 @@ object Dimens {
     val borderThick = 2.dp
 
     // Font size
-    val textXS = 12.sp
-    val textS = 14.sp
-    val textM = 16.sp
-    val textL = 20.sp
-    val textXL = 28.sp
+    val textXS: TextUnit
+        @Composable get() = (12 * LocalFontScale.current).sp
+
+    val textS: TextUnit
+        @Composable get() = (14 * LocalFontScale.current).sp
+
+    val textM: TextUnit
+        @Composable get() = (16 * LocalFontScale.current).sp
+
+    val textL: TextUnit
+        @Composable get() = (20 * LocalFontScale.current).sp
+
+    val textXL: TextUnit
+        @Composable get() = (28 * LocalFontScale.current).sp
     val ringSize = 256.dp
     val ringStroke = 12.dp
     val summaryCardHeight = 128.dp

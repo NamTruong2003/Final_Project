@@ -5,7 +5,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import com.healthtracker.model.ColorPalette
+import com.healthtracker.model.FontSize
 
 private fun colorSchemeFor(palette: ColorPalette, darkTheme: Boolean) = when (palette) {
     ColorPalette.GREEN -> if (darkTheme) greenDarkScheme() else greenLightScheme()
@@ -145,13 +147,16 @@ private fun purpleDarkScheme() = darkColorScheme(
 fun HealthTrackerTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     colorPalette: ColorPalette = ColorPalette.GREEN,
+    fontSize: FontSize = FontSize.MEDIUM,
     content: @Composable () -> Unit
 ) {
     val colorScheme = colorSchemeFor(colorPalette, darkTheme)
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
-    )
+    CompositionLocalProvider(LocalFontScale provides fontSize.toScale()) {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = Typography,
+            content = content
+        )
+    }
 }
