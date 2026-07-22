@@ -7,4 +7,5 @@ object NavRoutes {
     const val ACTIVITY_DIARY = "activity_diary"
     const val STATISTICS = "statistics"
     const val SETTINGS = "settings"
+    const val EDIT_PROFILE = "edit_profile"
 }

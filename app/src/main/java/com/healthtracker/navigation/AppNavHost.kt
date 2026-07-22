@@ -21,6 +21,8 @@ import com.healthtracker.ui.components.BottomNavTab
 import com.healthtracker.ui.dashboard.DashboardScreen
 import com.healthtracker.ui.mealdiary.MealDiaryScreen
 import com.healthtracker.ui.onboarding.OnboardingScreen
+import com.healthtracker.ui.settings.SettingsScreen
+import com.healthtracker.ui.settings.editprofile.EditProfileScreen
 import com.healthtracker.ui.statistics.StatisticsScreen
 
 @Composable
@@ -106,19 +108,24 @@ fun AppNavHost(
         }
 
         composable(NavRoutes.SETTINGS) {
-            PlaceholderScreen("Settings Screen")
+            SettingsScreen(
+                onEditProfileClick = { navController.navigate(NavRoutes.EDIT_PROFILE) },
+                onTabSelected = { tab ->
+                    when (tab) {
+                        BottomNavTab.HOME -> navController.navigate(NavRoutes.DASHBOARD)
+                        BottomNavTab.DIARY -> navController.navigate(NavRoutes.MEAL_DIARY)
+                        BottomNavTab.STATS -> navController.navigate(NavRoutes.STATISTICS)
+                        BottomNavTab.PROFILE -> {}
+                    }
+                }
+            )
+        }
+        composable(NavRoutes.EDIT_PROFILE) {
+            EditProfileScreen(
+                onBack = { navController.popBackStack() },
+                onSaved = { navController.popBackStack() }
+            )
         }
     }
 }
 
-@Composable
-private fun PlaceholderScreen(name: String) {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(text = name)
-    }
-}
