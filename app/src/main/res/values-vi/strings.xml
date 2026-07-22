@@ -97,4 +97,31 @@
     <string name="statistics_avg_out">Trung bình đốt</string>
     <string name="statistics_days_goal_met">Đạt mục tiêu</string>
     <string name="statistics_days_unit">ngày</string>
+
+    <string name="settings_title">Cài đặt</string>
+    <string name="settings_edit_profile_cta">Chỉnh sửa hồ sơ</string>
+    <string name="settings_language">Ngôn ngữ</string>
+    <string name="settings_appearance">Giao diện</string>
+    <string name="settings_brightness">Độ sáng</string>
+    <string name="brightness_light">Sáng</string>
+    <string name="brightness_dark">Tối</string>
+    <string name="brightness_system">Hệ thống</string>
+    <string name="settings_color">Màu sắc chủ đạo</string>
+    <string name="settings_font_size">Cỡ chữ</string>
+    <string name="font_size_small">Nhỏ</string>
+    <string name="font_size_medium">Vừa</string>
+    <string name="font_size_large">Lớn</string>
+    <string name="settings_other">Khác</string>
+    <string name="settings_app_version">Phiên bản ứng dụng</string>
+
+    <string name="edit_profile_title">Chỉnh sửa hồ sơ</string>
+    <string name="edit_profile_save">Lưu</string>
+    <string name="edit_profile_save_changes">Lưu thay đổi</string>
+    <string name="edit_profile_change_avatar">Thay đổi ảnh đại diện</string>
+    <string name="tdee_goal_label">TDEE mục tiêu</string>
+    <string name="bmi_index_label">Chỉ số BMI</string>
+    <string name="bmi_underweight">Thiếu cân</string>
+    <string name="bmi_normal">Bình thường</string>
+    <string name="bmi_overweight">Thừa cân</string>
+    <string name="bmi_obese">Béo phì</string>
 </resources>
