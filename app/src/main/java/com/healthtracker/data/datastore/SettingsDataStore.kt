@@ -5,6 +5,7 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import com.healthtracker.model.ColorPalette
 import com.healthtracker.model.FontSize
 import com.healthtracker.model.ThemeBrightness
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -12,7 +13,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Singleton
-
 
 private val Context.dataStore by preferencesDataStore(name = "settings")
 
@@ -23,11 +23,10 @@ class SettingsDataStore @Inject constructor(
     companion object {
         val KEY_LANGUAGE = stringPreferencesKey("language")
         val KEY_THEME_BRIGHTNESS = stringPreferencesKey("theme_brightness")
-        val KEY_THEME_COLOR = stringPreferencesKey("theme_color")
+        val KEY_COLOR_PALETTE = stringPreferencesKey("color_palette")
         val KEY_FONT_SIZE = stringPreferencesKey("font_size")
         val KEY_IS_ONBOARDED = booleanPreferencesKey("is_onboarded")
     }
-
 
     val language: Flow<String> = context.dataStore.data
         .map { prefs -> prefs[KEY_LANGUAGE] ?: "vi" }
@@ -35,7 +34,6 @@ class SettingsDataStore @Inject constructor(
     suspend fun setLanguage(langCode: String) {
         context.dataStore.edit { it[KEY_LANGUAGE] = langCode }
     }
-
 
     val themeBrightness: Flow<ThemeBrightness> = context.dataStore.data
         .map { prefs ->
@@ -47,14 +45,15 @@ class SettingsDataStore @Inject constructor(
         context.dataStore.edit { it[KEY_THEME_BRIGHTNESS] = brightness.name }
     }
 
+    val colorPalette: Flow<ColorPalette> = context.dataStore.data
+        .map { prefs ->
+            val value = prefs[KEY_COLOR_PALETTE] ?: ColorPalette.GREEN.name
+            ColorPalette.valueOf(value)
+        }
 
-    val themeColor: Flow<String> = context.dataStore.data
-        .map { prefs -> prefs[KEY_THEME_COLOR] ?: "blue" }
-
-    suspend fun setThemeColor(colorName: String) {
-        context.dataStore.edit { it[KEY_THEME_COLOR] = colorName }
+    suspend fun setColorPalette(palette: ColorPalette) {
+        context.dataStore.edit { it[KEY_COLOR_PALETTE] = palette.name }
     }
-
 
     val fontSize: Flow<FontSize> = context.dataStore.data
         .map { prefs ->
@@ -65,7 +64,6 @@ class SettingsDataStore @Inject constructor(
     suspend fun setFontSize(size: FontSize) {
         context.dataStore.edit { it[KEY_FONT_SIZE] = size.name }
     }
-
 
     val isOnboarded: Flow<Boolean> = context.dataStore.data
         .map { prefs -> prefs[KEY_IS_ONBOARDED] ?: false }
