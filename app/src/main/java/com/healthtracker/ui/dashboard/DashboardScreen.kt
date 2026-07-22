@@ -13,6 +13,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -38,7 +39,9 @@ fun DashboardScreen(
     onTabSelected: (BottomNavTab) -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
-
+    LaunchedEffect(Unit) {
+        viewModel.refresh()
+    }
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = { DashboardTopBar(onSettingsClick = onSettingsClick) },

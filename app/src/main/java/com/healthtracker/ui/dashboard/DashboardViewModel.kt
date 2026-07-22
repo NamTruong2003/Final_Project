@@ -49,4 +49,7 @@ class DashboardViewModel @Inject constructor(
             }
         }
     }
+    fun refresh() {
+        loadDashboard(_uiState.value.date)
+    }
 }
