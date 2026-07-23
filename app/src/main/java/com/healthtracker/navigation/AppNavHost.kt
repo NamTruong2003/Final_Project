@@ -61,6 +61,7 @@ fun AppNavHost(
                     when (tab) {
                         BottomNavTab.HOME -> {}
                         BottomNavTab.DIARY -> navController.navigate(NavRoutes.MEAL_DIARY)
+                        BottomNavTab.ACTIVITY ->navController.navigate(NavRoutes.ACTIVITY_DIARY)
                         BottomNavTab.STATS -> navController.navigate(NavRoutes.STATISTICS)
                         BottomNavTab.PROFILE -> navController.navigate(NavRoutes.SETTINGS)
                     }
@@ -74,6 +75,7 @@ fun AppNavHost(
                     when (tab) {
                         BottomNavTab.HOME -> navController.navigate(NavRoutes.DASHBOARD)
                         BottomNavTab.DIARY -> {}
+                        BottomNavTab.ACTIVITY ->navController.navigate(NavRoutes.ACTIVITY_DIARY)
                         BottomNavTab.STATS -> navController.navigate(NavRoutes.STATISTICS)
                         BottomNavTab.PROFILE -> navController.navigate(NavRoutes.SETTINGS)
                     }
@@ -86,7 +88,8 @@ fun AppNavHost(
                 onTabSelected = { tab ->
                     when (tab) {
                         BottomNavTab.HOME -> navController.navigate(NavRoutes.DASHBOARD)
-                        BottomNavTab.DIARY -> {}
+                        BottomNavTab.DIARY ->navController.navigate(NavRoutes.MEAL_DIARY)
+                        BottomNavTab.ACTIVITY -> {}
                         BottomNavTab.STATS -> navController.navigate(NavRoutes.STATISTICS)
                         BottomNavTab.PROFILE -> navController.navigate(NavRoutes.SETTINGS)
                     }
@@ -100,6 +103,7 @@ fun AppNavHost(
                     when (tab) {
                         BottomNavTab.HOME -> navController.navigate(NavRoutes.DASHBOARD)
                         BottomNavTab.DIARY -> navController.navigate(NavRoutes.MEAL_DIARY)
+                        BottomNavTab.ACTIVITY ->navController.navigate(NavRoutes.ACTIVITY_DIARY)
                         BottomNavTab.STATS -> {}
                         BottomNavTab.PROFILE -> navController.navigate(NavRoutes.SETTINGS)
                     }
@@ -113,6 +117,7 @@ fun AppNavHost(
                 onTabSelected = { tab ->
                     when (tab) {
                         BottomNavTab.HOME -> navController.navigate(NavRoutes.DASHBOARD)
+                        BottomNavTab.ACTIVITY ->navController.navigate(NavRoutes.ACTIVITY_DIARY)
                         BottomNavTab.DIARY -> navController.navigate(NavRoutes.MEAL_DIARY)
                         BottomNavTab.STATS -> navController.navigate(NavRoutes.STATISTICS)
                         BottomNavTab.PROFILE -> {}
