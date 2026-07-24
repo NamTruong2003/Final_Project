@@ -41,6 +41,7 @@
     <string name="nav_diary">Diary</string>
     <string name="nav_stats">Stats</string>
     <string name="nav_profile">Profile</string>
+    <string name="nav_activity">Activity</string>
     <string name="dashboard_today">Today</string>
     <string name="dashboard_kcal_remaining">kcal remaining</string>
     <string name="dashboard_target">Target</string>
@@ -123,5 +124,5 @@
     <string name="bmi_normal">Normal</string>
     <string name="bmi_overweight">Overweight</string>
     <string name="bmi_obese">Obese</string>
-
+    <string name="save_success">Save profile successfully</string>
 </resources>

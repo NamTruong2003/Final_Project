@@ -57,7 +57,7 @@ fun ActivityDiaryScreen(
             }
         },
         bottomBar = {
-            BottomNavBar(currentTab = BottomNavTab.DIARY, onTabSelected = onTabSelected)
+            BottomNavBar(currentTab = BottomNavTab.ACTIVITY, onTabSelected = onTabSelected)
         }
     ) { innerPadding ->
         if (uiState.isLoading) {

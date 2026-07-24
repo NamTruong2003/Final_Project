@@ -51,10 +51,7 @@ class MealRepository @Inject constructor(
     suspend fun addMealFromFood(foodId: Int, quantity: Int, mealType: MealType, date: LocalDate) {
         val food = foodRepository.getFoodById(foodId) ?: return
 
-        val totalCalories = when (food.unitType) {
-            FoodUnitType.PER_100G -> (food.caloriesPerUnit * quantity) / 100
-            FoodUnitType.PER_SERVING -> food.caloriesPerUnit * quantity
-        }
+        val totalCalories = food.caloriesPerUnit * quantity
 
         val entry = MealEntryEntity(
             foodId = foodId,

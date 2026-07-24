@@ -18,6 +18,9 @@ import java.time.LocalDate
 import javax.inject.Inject
 import com.healthtracker.R
 import com.healthtracker.util.toCleanString
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 
 @HiltViewModel
 class EditProfileViewModel @Inject constructor(
@@ -26,6 +29,9 @@ class EditProfileViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(EditProfileUiState())
     val uiState: StateFlow<EditProfileUiState> = _uiState.asStateFlow()
+
+    private val _saveSuccessEvent = MutableSharedFlow<Unit>()
+    val saveSuccessEvent: SharedFlow<Unit> = _saveSuccessEvent.asSharedFlow()
 
     init {
         viewModelScope.launch {
@@ -77,7 +83,7 @@ class EditProfileViewModel @Inject constructor(
         _uiState.update { it.copy(goal = goal) }
     }
 
-    fun onSave(onSuccess: () -> Unit) {
+    fun onSave() {
         val state = _uiState.value
 
         val dateOfBirth = state.dateOfBirth
@@ -133,7 +139,7 @@ class EditProfileViewModel @Inject constructor(
             _uiState.update { it.copy(isSaving = true) }
             userProfileRepository.saveProfile(updatedProfile)
             _uiState.update { it.copy(isSaving = false) }
-            onSuccess()
+            _saveSuccessEvent.emit(Unit)
         }
     }
 }
