@@ -125,4 +125,6 @@
     <string name="bmi_normal">Bình thường</string>
     <string name="bmi_overweight">Thừa cân</string>
     <string name="bmi_obese">Béo phì</string>
+
+    <string name="save_success">Đã lưu hồ sơ thành công</string>
 </resources>

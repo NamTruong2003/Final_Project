@@ -41,9 +41,19 @@ fun EditProfileScreen(
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     var showDatePicker by remember { mutableStateOf(false) }
+    val snackbarHostState = remember { SnackbarHostState() }
+    val successMessage = stringResource(R.string.save_success)
+
+    LaunchedEffect(Unit) {
+        viewModel.saveSuccessEvent.collect {
+            snackbarHostState.showSnackbar(successMessage)
+            onSaved()
+        }
+    }
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = {
@@ -59,15 +69,23 @@ fun EditProfileScreen(
                     }
                 },
                 actions = {
-                    TextButton(onClick = { viewModel.onSave(onSuccess = onSaved) }, enabled = !uiState.isSaving) {
-                        Text(stringResource(R.string.edit_profile_save), fontWeight = FontWeight.SemiBold)
+                    TextButton(onClick = { viewModel.onSave() }, enabled = !uiState.isSaving) {
+                        Text(
+                            stringResource(R.string.edit_profile_save),
+                            fontWeight = FontWeight.SemiBold
+                        )
                     }
                 }
             )
         }
     ) { innerPadding ->
         if (uiState.isLoading) {
-            Box(modifier = Modifier.fillMaxSize().padding(innerPadding), contentAlignment = Alignment.Center) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(innerPadding),
+                contentAlignment = Alignment.Center
+            ) {
                 CircularProgressIndicator()
             }
         } else {
@@ -95,7 +113,8 @@ fun EditProfileScreen(
                     Column(modifier = Modifier.weight(1f)) {
                         LabeledField(label = stringResource(R.string.label_date_of_birth)) {
                             DateField(
-                                dateText = uiState.dateOfBirth?.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) ?: "",
+                                dateText = uiState.dateOfBirth?.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
+                                    ?: "",
                                 placeholder = stringResource(R.string.placeholder_date),
                                 onClick = { showDatePicker = true }
                             )
@@ -104,7 +123,10 @@ fun EditProfileScreen(
                     }
                     Column(modifier = Modifier.weight(1f)) {
                         LabeledField(label = stringResource(R.string.label_gender)) {
-                            GenderSegmentedControl(selected = uiState.gender, onSelect = viewModel::onGenderChange)
+                            GenderSegmentedControl(
+                                selected = uiState.gender,
+                                onSelect = viewModel::onGenderChange
+                            )
                         }
                     }
                 }
@@ -114,13 +136,21 @@ fun EditProfileScreen(
                 Row(horizontalArrangement = Arrangement.spacedBy(Dimens.spaceM)) {
                     Column(modifier = Modifier.weight(1f)) {
                         LabeledField(label = stringResource(R.string.label_weight)) {
-                            StepperField(value = uiState.weightKg, onValueChange = viewModel::onWeightChange, step = 1.0)
+                            StepperField(
+                                value = uiState.weightKg,
+                                onValueChange = viewModel::onWeightChange,
+                                step = 1.0
+                            )
                         }
                         uiState.weightError?.let { ErrorText(stringResource(it)) }
                     }
                     Column(modifier = Modifier.weight(1f)) {
                         LabeledField(label = stringResource(R.string.label_height)) {
-                            StepperField(value = uiState.heightCm, onValueChange = viewModel::onHeightChange, step = 1.0)
+                            StepperField(
+                                value = uiState.heightCm,
+                                onValueChange = viewModel::onHeightChange,
+                                step = 1.0
+                            )
                         }
                         uiState.heightError?.let { ErrorText(stringResource(it)) }
                     }
@@ -163,13 +193,18 @@ fun EditProfileScreen(
                 Spacer(Modifier.height(Dimens.spaceXXL))
 
                 Button(
-                    onClick = { viewModel.onSave(onSuccess = onSaved) },
+                    onClick = { viewModel.onSave() },
                     enabled = !uiState.isSaving,
                     shape = androidx.compose.foundation.shape.RoundedCornerShape(Dimens.radiusM),
-                    modifier = Modifier.fillMaxWidth().height(Dimens.buttonHeight)
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(Dimens.buttonHeight)
                 ) {
                     if (uiState.isSaving) {
-                        CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(20.dp),
+                            strokeWidth = 2.dp
+                        )
                     } else {
                         Text(stringResource(R.string.edit_profile_save_changes))
                     }
